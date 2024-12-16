@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Draggable Todolist Project</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="project-title">Todo App</h2>
+        <nav class="project-theme">
+            <div class="themes-parent opacity">
+                <div class="themes hidden">
+                    <!-- theme color menu open here -->
+                </div>
+            </div>
+            <span class="toggle-theme">Theme</span>
+        </nav>
+    </header>
+    <main>
+        <div class="card" data-todo-name="todo">
+            <div class="card-header">
+                <h2 class="card-title">Todo</h2>
+                <button class="open-modal">Add</button>
+            </div>
+            <ul class="todo-list-container">
+                <!-- Todo list will be rendered from JavaScript -->
+            </ul>
+        </div>
+        <div class="card" data-todo-name="in_progress">
+            <div class="card-header disable-pointer">
+                <h2 class="card-title">In Progress</h2>
+            </div>
+            <ul id="inprogress-list-container" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                <!-- In Progress list will be rendered from JavaScript -->
+            </ul>
+        </div>
+        <div class="card" data-todo-name="done">
+            <div class="card-header disable-pointer">
+                <h2 class="card-title">Done</h2>
+            </div>
+            <ul id="done-list-container" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                <!-- Done list will be rendered from JavaScript -->
+            </ul>
+        </div>
+        <div class="card" data-todo-name="trash">
+            <div class="card-header">
+                <h2 class="card-title">Trash</h2>
+                <button class="clean-trash">Clean</button>
+            </div>
+            <ul id="trash-list-container" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                <!-- Done list will be rendered from JavaScript -->
+            </ul>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal">
+            <div class="content">
+                <form id="add-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input minlength="3" type="text" id="title-input" placeholder="Title..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="desc">Description</label>
+                        <textarea minlength="5" name="desc" id="desc" cols="30" rows="5"
+                            placeholder="Todo description.." value=""></textarea>
+                    </div>
+                    <div class="form-control">
+                        <button id="btn-add">Add</button>
+                        <button id="btn-close">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

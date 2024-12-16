@@ -1,0 +1,318 @@
+/* fonts */
+@font-face {
+  font-family: 'Nunito';
+  src: url(../fonts/Nunito-Regular.ttf);
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .card {
+    width: 45%;
+  }
+
+  .project-title {
+    font-size: 24px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  .card {
+    width: 23%;
+  }
+}
+
+
+/* main css styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito';
+}
+
+body {
+  background-color: #805ad5;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px 2rem;
+}
+
+main {
+  width: 100%;
+  padding: 20px 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+
+.project-title {
+  width: 50%;
+  font-weight: bold;
+  color: #fff;
+}
+
+.project-theme {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.themes {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 16px 40px rgba(98, 125, 153, 0.2);
+}
+
+.themes-parent {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  justify-content: end;
+  align-items: center;
+}
+
+.theme {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.toggle-theme {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hidden{
+  display: none;
+}
+
+.opacity{
+  opacity: 0;
+}
+
+.card {
+  background-color: #ebecf0;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  margin-top: 10px;
+  transition: all 0.2s ease-out;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-item {
+  cursor: move;
+  background-color: #fff;
+  border-radius: 0.1rem;
+  box-shadow: 0 2px 5px rgba(112, 144, 176, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0.7rem;
+  margin: 0.5rem 0;
+  min-height: 40px;
+
+  transition: all 0.2s ease-out;
+}
+
+.card-item .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item .indicator {
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+}
+
+.card-item h3 {
+  margin-bottom: 0.4rem;
+}
+
+.card-item p {
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.card-item:hover {
+  box-shadow: 0 8px 5px rgba(112, 144, 176, 0.2);
+}
+
+.draggable-div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.hidden {
+  display: flex;
+}
+
+.on-hover {
+  box-shadow: 0 16px 40px rgba(112, 144, 176, 0.2);
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-out;
+}
+
+.disable-pointer {
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+.modal .content {
+  border-radius: 10px;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.todo-list-container {
+  width: 100%;
+  text-decoration: none;
+}
+
+ul {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+  list-style-type: none;
+}
+
+.todolist-item {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(112, 144, 176, 0.2);
+  background-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.todolist-itemRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todolist-itemDelete {
+  width: 100%;
+  padding-top: 5px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.status-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.todolist-itemDesc {
+  width: 100%;
+  padding-top: 5px;
+  color: rgb(56, 56, 56);
+  overflow: scroll;
+  overflow-wrap: break-word;
+  scrollbar-width: none;
+}
+
+.form-group {
+  display: flex;
+  padding: 1.5rem 2rem 0.5rem;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group textarea,
+.form-group input {
+  padding: 8px;
+}
+
+.form-group textarea:focus,
+.form-group input:focus {
+  outline-color: blue;
+}
+
+.form-control {
+  display: flex;
+  padding: 1.5rem 2rem 0.5rem;
+  justify-content: flex-end;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+}
+
+.form-control button {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+}
