@@ -5,9 +5,9 @@
 
 📸Gallery
 
-![temp conversion](https://github.com/user-attachments/assets/5cdce7e1-eda3-4d45-b325-3fc60f7fcc93)
+![temp conversion](https://github.com/user-attachments/assets/db31abdb-edee-4d2a-98bd-e867b4b71b15)
 
-- [Demo Project](https://mhdigholami.github.io/Note-App/) ✅
+- [Demo Project]() ✅
 
 - Developed by Mahdi Gholami
 
